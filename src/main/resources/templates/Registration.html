@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/css/LoginCss.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="logo">
+        <img src="/css/img/shop-logo.png" alt="">
+    </div>
+    <div class="text-center mt-4 name" style="padding-left: 50px">
+        Admin Sign Up
+    </div>
+    <form class="p-3 mt-3" method="post" th:object="${admin}" th:action="@{/admin/adminSignUp}">
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="text" name="firstName" id="firstName" placeholder="Firstname" th:field="*{firstName}">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="text" name="lastName" id="lastName" placeholder="Lastname" th:field="*{lastName}">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="text" name="lastName" id="address" placeholder="Address" th:field="*{adminAddress}">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="text" name="phoneNumber" id="phone" placeholder="Phone" th:field="*{adminPhone}">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="email" name="emailAddress" id="emailAddress" placeholder="Email" th:field="*{adminEmail}">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="password" name="password" id="pwd" placeholder="Password" th:field="*{adminPassword}">
+        </div>
+        <button class="btn mt-3" type="submit">Sign Up</button>
+    </form>
+    <div class="text-center fs-6">
+        <a href="#">Forget password?</a> or <a th:href="@{/admin/adminLogin}">Sign In</a>
+    </div>
+</div>
+</body>
+</html>

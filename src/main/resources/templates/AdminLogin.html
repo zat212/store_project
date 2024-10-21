@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="/css/LoginCss.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="wrapper">
+    <div class="logo">
+        <img src="/css/img/shop-logo.png" alt="">
+    </div>
+    <div class="text-center mt-4 name" style="padding-left: 30px">
+        Shop Admin Login
+    </div>
+    <form class="p-3 mt-3">
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="text" name="userName" id="userName" placeholder="Username">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="password" name="password" id="pwd" placeholder="Password">
+        </div>
+        <button class="btn mt-3">Login</button>
+    </form>
+    <div class="text-center fs-6">
+        <a href="#">Forget password?</a> or <a th:href="@{/admin/adminRegistration}">Sign up</a>
+    </div>
+</div>
+</body>
+</html>
